@@ -66,14 +66,14 @@ Follow these steps to install Foreman and set up the environment:
 ### 2.2 Installing Rojo Using Foreman
 
 To install Rojo using Foreman, open a new PowerShell or command line window and run the following command:
-```
+```console
 foreman install rojo
 ```
 This will install the correct version of Rojo using Foreman.
 
 ### 2.3 Installing Wally using Foreman
 To install Wally using foreman, open a new PowerShell or command line window and run the following command:
-```
+```console
 foreman install wally
 ```
 Wally should successfully be installed on your system.
@@ -114,14 +114,14 @@ To initialize a directory for Rojo integration, follow these steps:
 1. Open the terminal or command prompt.
 2. Navigate to the directory where you want to initialize your game.
 3. Run the following command:
-   ```
+   ```console
    rojo init my-new-game
    ```
    This will initialize the directory with the specified name.
 ### 4.2 Github integration
 It is recommended to use Visual Studio Code Source Control with Github Desktop integrated.
 Be sure to have a `.gitignore` file which contains the following:
-```
+```.gitignore
 # Project place file
 /build.rbxlx
 
@@ -142,7 +142,7 @@ To build the rbxlx file using Rojo, follow these steps:
 1. Open the terminal or command prompt.
 2. Navigate to the directory where your game files are located.
 3. Run the following command:
-   ```
+   ```console
    rojo build -o build.rbxlx
    ```
    This will generate the rbxlx file named "build.rbxlx" in the current directory.
@@ -152,7 +152,7 @@ To start the Rojo live server, follow these steps:
 1. Open the terminal or command prompt.
 2. Navigate to the directory where your game files are located.
 3. Run the following command:
-   ```
+   ```console
    rojo serve
    ```
    This will start the Rojo live server
@@ -175,7 +175,7 @@ To initialize Wally in your project directory, follow these steps:
 1. Open the terminal or command prompt.
 2. Navigate to your project directory.
 3. Run the following command:
-   ```
+   ```console
    wally init
    ```
 
@@ -183,7 +183,7 @@ To initialize Wally in your project directory, follow these steps:
 To add project dependencies using Wally, follow these steps:
 1. Open the `wally.toml` file located in your project directory.
 2. Add the project dependencies to the file in the following format:
-   ```
+   ```toml
    [dependencies]
    roact = "roblox/roact@1.4.4"
    ```
@@ -194,7 +194,7 @@ To install the project dependencies using Wally, follow these steps:
 1. Open the terminal or command prompt.
 2. Navigate to your project directory.
 3. Run the following command:
-   ```
+   ```console
    wally install
    ```
    This will install the specified dependencies.
