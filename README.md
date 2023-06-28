@@ -1,8 +1,9 @@
-# Rojo Visual Studio to Roblox Studio Integration Developer Documentation
+# GitHub Integration for Roblox Studio with Rojo and Visual Studio Code Developer Documentation
 
-- [Rojo Visual Studio to Roblox Studio Integration Developer Documentation](#rojo-visual-studio-to-roblox-studio-integration-developer-documentation)
+- [GitHub Integration for Roblox Studio with Rojo and Visual Studio Code Developer Documentation](#github-integration-for-roblox-studio-with-rojo-and-visual-studio-code-developer-documentation)
   - [1. Introduction](#1-introduction)
   - [2. Prerequisites](#2-prerequisites)
+    - [2.1 Installing Rojo Using Foreman](#21-installing-rojo-using-foreman)
   - [3. Installation](#3-installation)
     - [3.1 Roblox Studio Plugins](#31-roblox-studio-plugins)
     - [3.2 Visual Studio Code Extensions](#32-visual-studio-code-extensions)
@@ -48,11 +49,28 @@ If you have any questions, require assistance, or want to connect with the commu
 Before using Rojo Visual Studio to Roblox Studio integration, ensure the following prerequisites are met:
 - Visual Studio Code is installed on your system.
 - Roblox Studio is installed on your system.
-- PIP (Python Package Installer) is installed. If PIP is not installed, follow the instructions specific to your operating system from the [official PIP documentation](https://pip.pypa.io/en/stable/installing/).
-- Rojo is installed. You can install Rojo by running the following command in your terminal or command prompt:
-  ```
-  pip install rojo
-  ```
+Certainly! Here's an updated section on installing Foreman as an alternative to Rojo:
+
+### 2.1 Installing Rojo Using Foreman
+Follow these steps to install Foreman and set up the environment:
+
+1. Download Foreman from the [official repository or release page](https://github.com/Roblox/foreman/releases)
+2. Extract the downloaded archive into a folder in your Program Files directory.
+3. Run the Foreman executable file (e.g., `foreman.exe`) from the extracted folder.
+4. Verify that Foreman has created the necessary files and folders in your User directory (e.g., `.foreman` folder).
+5. [Edit your system's environment variables and add the following](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows):
+   - Add the folder path where Foreman is located in your Program Files directory to the `PATH` variable.
+   - Add the `bin` folder inside the folder created by the Foreman executable in your User directory to the `PATH` variable.
+6. Restart any open PowerShell or command line instances to apply the changes.
+7. To install Rojo using Foreman, open a new PowerShell or command line window and run the following command:
+   ```
+   foreman install rojo
+   ```
+   This will install the correct version of Rojo using Foreman.
+
+By following these steps, you can successfully install Foreman and use it to install Rojo for your Roblox Studio integration.
+
+Note: Make sure to replace `foreman.exe` with the actual filename of the Foreman executable in your system.
 
 ## 3. Installation
 Ensure that Visual Studio Code, Roblox Studio, and Rojo are correctly installed on your system.
