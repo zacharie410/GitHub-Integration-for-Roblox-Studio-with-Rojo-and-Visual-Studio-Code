@@ -34,6 +34,14 @@ This repository serves as a comprehensive guide and template for integrating Rob
 Before using Rojo Visual Studio to Roblox Studio integration, ensure the following prerequisites are met:
 - Visual Studio Code is installed on your system.
 - Roblox Studio is installed on your system.
+
+Before you continue, decide if you want to use foreman or aftman as your toolchain manager.
+- You can view aftman here: https://github.com/LPGhatguy/aftman
+- decide which installation seems right for you
+- aftman is the newer version of foreman
+- Guide on how to install foreman below
+- If you use aftman, you may skip some of these steps
+
 ### 2.1 Installing Foreman
 Follow these steps to install Foreman and set up the environment:
 
