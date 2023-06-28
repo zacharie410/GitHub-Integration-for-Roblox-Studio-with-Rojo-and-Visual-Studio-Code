@@ -28,24 +28,7 @@
 
 
 ## 1. Introduction
-
-Welcome to the Rojo Visual Studio to Roblox Studio Integration Repository! This repository serves as a comprehensive guide and template for developers who wish to incorporate Rojo into their workflow, facilitating smooth collaboration between Visual Studio Code and Roblox Studio.
-
-Rojo is a powerful tool that bridges the gap between the popular Visual Studio Code IDE and the Roblox Studio game development environment. By leveraging Rojo's capabilities, you can streamline your development process, enhance productivity, and create high-quality Roblox experiences.
-
-This repository provides detailed documentation and a sample project structure to help you get started with Rojo integration quickly. Whether you are a seasoned Roblox developer or new to the platform, this guide will assist you in setting up a robust development environment and leveraging the full potential of Rojo.
-
-With Rojo, you can benefit from features such as live synchronization, efficient code editing, dependency management, and linting. By seamlessly connecting Visual Studio Code with Roblox Studio, you can leverage the power of a professional IDE while harnessing the capabilities of Roblox Studio's game development environment.
-
-The documentation covers various aspects of Rojo integration, including initializing the directory, building the rbxlx file, starting the live server, connecting to the live server, and working with the Wally extension for plugin and dependency management. Additionally, it provides instructions for setting up the Selene linter to ensure code quality and adherence to Roblox Lua coding standards.
-
-To enhance your development experience, we recommend installing the recommended Visual Studio Code extensions such as Roblox API Explorer, Roblox LSP, Rojo - Roblox Studio Sync, Rojo Viewer, and Selene. These extensions offer powerful features and tools tailored specifically for Roblox development, enabling you to write clean and efficient code with ease.
-
-We encourage you to explore the documentation, follow the step-by-step instructions, and customize the provided template according to your project requirements. Feel free to adapt the structure and workflows to fit your development needs, making the most out of Rojo's capabilities.
-
-We hope this repository serves as a valuable resource and empowers you to harness the power of Rojo for efficient and seamless integration between Visual Studio Code and Roblox Studio. Happy coding and game development!
-
-If you have any questions, require assistance, or want to connect with the community, please refer to the support and community section in the documentation. The Rojo Discord server, Wally Discord server, and respective GitHub repositories are excellent resources to seek guidance and engage with fellow developers.
+This repository serves as a comprehensive guide and template for integrating Roblox Studio with GitHub using Rojo and Visual Studio Code. Streamline your collaboration and version control workflows, enabling efficient development and seamless integration between these powerful tools. Follow the provided documentation to set up a robust development environment, leverage Rojo's capabilities, and enhance your productivity in creating amazing Roblox experiences. Connect with the community and explore the possibilities of GitHub integration for your Roblox Studio projects.
 
 ## 2. Installing Prerequisites
 Before using Rojo Visual Studio to Roblox Studio integration, ensure the following prerequisites are met:
