@@ -1,0 +1,13 @@
+# Project place file
+/build.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+#Wally files
+/wally.lock
+/wally.toml
+
+#Packages folder
+Packages/
