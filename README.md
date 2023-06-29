@@ -4,8 +4,7 @@
   - [1. Introduction](#1-introduction)
   - [2. Installing Prerequisites](#2-installing-prerequisites)
     - [2.1 Installing Foreman](#21-installing-foreman)
-    - [2.2 Installing Rojo Using Foreman](#22-installing-rojo-using-foreman)
-    - [2.3 Installing Wally using Foreman](#23-installing-wally-using-foreman)
+    - [2.2 Installing Rojo and Wally Using Foreman](#22-installing-rojo-and-wally-using-foreman)
   - [3. Installing Plugins and Extensions](#3-installing-plugins-and-extensions)
     - [3.1 Roblox Studio Plugins](#31-roblox-studio-plugins)
     - [3.2 Visual Studio Code Extensions](#32-visual-studio-code-extensions)
@@ -32,55 +31,62 @@ This repository serves as a comprehensive guide and template for integrating Rob
 
 ## 2. Installing Prerequisites
 Before using Rojo Visual Studio to Roblox Studio integration, ensure the following prerequisites are met:
+- Device running on Windows 8 or later versions.
 - Visual Studio Code is installed on your system.
 - Roblox Studio is installed on your system.
+- A text editor program is installed on your system.
 
-Before you continue, decide if you want to use foreman or aftman as your toolchain manager.
+Before you continue, decide if you want to use [Foreman](https://github.com/Roblox/foreman) or [Aftman](https://github.com/LPGhatguy/aftman) as your toolchain manager.
+A toolchain manager is a software utility that simplifies the installation and management of development toolchains, providing a centralized interface to handle the setup and configuration of necessary tools for software development.
 - You can view aftman here: https://github.com/LPGhatguy/aftman
-- decide which installation seems right for you
-- aftman is the newer version of foreman
-- Guide on how to install foreman below
-- If you use aftman, you may skip some of these steps
+   - Aftman is the newer version of Foreman, decide which installation seems right for you
+- Guide on how to install Foreman below
+- If using Aftman, you may skip some of these steps
 
 ### 2.1 Installing Foreman
 Follow these steps to install Foreman and set up the environment:
 
 1. Download Foreman from the [official repository or release page](https://github.com/Roblox/foreman/releases)
-2. Extract the downloaded archive into a folder in your Program Files directory.
-3. Run the Foreman executable file (e.g., `foreman.exe`) from the extracted folder.
-4. Verify that Foreman has created the necessary files and folders in your current User directory (e.g., `C:/Users/yourUser/.foreman` folder).
-5. [Edit your system's environment variables and add the following](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows):
+2. Create a folder in your Program Files directory named "Foreman".
+3. Extract the downloaded archive into the newly made "Foreman" folder.
+4. Run the Foreman executable file (e.g., `foreman.exe`) from the extracted folder, this should create a file called .foreman in your current User directory.
+5. Verify that Foreman has created the necessary files and folders in your current User directory (e.g., `C:/Users/yourUser/.foreman` folder).
+6. [Edit your system's environment variables](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows) and add the following:
    - Add the folder path where Foreman is located in your Program Files directory to the `PATH` variable.
    - Add the `bin` folder inside the folder created by the Foreman executable in your User directory to the `PATH` variable. (e.g., `C:/Users/yourUser/.foreman/bin`)
-6. Restart any open PowerShell or command line instances to apply the changes.
+7. Restart any open PowerShell or command line instances to apply the changes.
 
-### 2.2 Installing Rojo Using Foreman
+### 2.2 Installing Rojo and Wally Using Foreman
+Follow these steps to install Rojo and Wally using Foreman:
 
-To install Rojo using Foreman, open a new PowerShell or command line window and run the following command:
-```console
-foreman install rojo
-```
-This will install the correct version of Rojo using Foreman.
-
-### 2.3 Installing Wally using Foreman
-To install Wally using foreman, open a new PowerShell or command line window and run the following command:
-```console
-foreman install wally
-```
-Wally should successfully be installed on your system.
+1. Navigate to the .foreman folder in you current User directory.
+2. Open the file "foreman.toml" with the text editor of your choice.
+   - This is Foreman's configuration file, here we can tell Foreman what tools to download or update.
+3. Paste the following under line 8:
+   ```console
+   rojo = { source = "rojo-rbx/rojo", version = "7" }
+   wally = { source = "UpliftGames/wally", version = "0.3.1" }
+   ```
+4. Save the file and close it.
+6. Open a PowerShell or command line prompt and run the following commmand:
+   ```console
+   foreman install
+   ```
+7. Confirm that Rojo and Wally were installed correctly by running the command:
+   ```console
+   foreman list
+   ```
+   This should list your installed tools, if foreman does not list any installed tools, try following the steps again.
 
 ## 3. Installing Plugins and Extensions
-Ensure that Visual Studio Code, Roblox Studio, and Rojo are correctly installed on your system.
 
 ### 3.1 Roblox Studio Plugins
-In addition, you need to install the Rojo plugin in Roblox Studio. Follow these steps to install the Rojo plugin:
-1. Open Roblox Studio.
-2. Click on "Plugins" in the top menu.
-3. Click on "Manage Plugins" in the dropdown menu.
-4. In the Plugins window, search for "Rojo".
-5. Click on the "Get" button next to the "Rojo" plugin.
-6. Wait for the plugin to download and install.
-7. Once the installation is complete, you will see the "Rojo" tab in the top menu.
+Follow these steps to install the Rojo plugin in Roblox Studio:
+1. Open a PowerShell or command line prompt
+2. Run the following command:
+   ```console
+   rojo plugin install
+   ```
 
 ### 3.2 Visual Studio Code Extensions
 To enhance your development experience with Rojo Visual Studio to Roblox Studio integration, it is recommended to install the following Visual Studio Code extensions. These extensions provide additional functionality and tools specific to Roblox development.
@@ -108,7 +114,7 @@ To initialize a directory for Rojo integration, follow these steps:
    ```console
    rojo init my-new-game
    ```
-   This will initialize the directory with the specified name.
+   This will initialize the directory with the specified name (in this case, the name is "my-new-game").
 ### 4.2 Github integration
 It is recommended to use Visual Studio Code Source Control with Github Desktop integrated.
 Be sure to have a `.gitignore` file which contains the following:
@@ -119,17 +125,10 @@ Be sure to have a `.gitignore` file which contains the following:
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
-
-#Wally files
-/wally.lock
-/wally.toml
-
-#Packages folder
-Packages/
 ```
 
-### 4.3 Building the rbxlx File
-To build the rbxlx file using Rojo, follow these steps:
+### 4.3 Building the place File
+To build the place file using Rojo, follow these steps:
 1. Open the terminal or command prompt.
 2. Navigate to the directory where your game files are located.
 3. Run the following command:
@@ -138,6 +137,7 @@ To build the rbxlx file using Rojo, follow these steps:
    ```
    This will generate the rbxlx file named "build.rbxlx" in the current directory.
 
+Alternatively, a place file could be created via Roblox Studio.
 ### 4.4 Starting the Live Server
 To start the Rojo live server, follow these steps:
 1. Open the terminal or command prompt.
