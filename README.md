@@ -3,15 +3,15 @@
 - [GitHub Integration for Roblox Studio with Rojo and Visual Studio Code Developer Documentation](#github-integration-for-roblox-studio-with-rojo-and-visual-studio-code-developer-documentation)
   - [1. Introduction](#1-introduction)
   - [2. Installing Prerequisites](#2-installing-prerequisites)
-    - [2.1 Installing Foreman](#21-installing-foreman)
-    - [2.2 Installing Rojo and Wally Using Foreman](#22-installing-rojo-and-wally-using-foreman)
+    - [2.1 Installing Aftman using the auto installer](#21-installing-aftman-using-the-auto-installer)
+    - [2.2 Installing Aftman Manually](#22-installing-aftman-manually)
   - [3. Installing Plugins and Extensions](#3-installing-plugins-and-extensions)
     - [3.1 Roblox Studio Plugins](#31-roblox-studio-plugins)
     - [3.2 Visual Studio Code Extensions](#32-visual-studio-code-extensions)
   - [4. Usage](#4-usage)
     - [4.1 Initializing the Directory](#41-initializing-the-directory)
     - [4.2 Github integration](#42-github-integration)
-    - [4.3 Building the rbxlx File](#43-building-the-rbxlx-file)
+    - [4.3 Building the place File](#43-building-the-place-file)
     - [4.4 Starting the Live Server](#44-starting-the-live-server)
     - [4.5 Connecting to the Live Server](#45-connecting-to-the-live-server)
   - [5. Working with Wally Extension](#5-working-with-wally-extension)
@@ -34,49 +34,27 @@ Before using Rojo Visual Studio to Roblox Studio integration, ensure the followi
 - Device running on Windows 8 or later versions.
 - Visual Studio Code is installed on your system.
 - Roblox Studio is installed on your system.
-- A text editor program is installed on your system.
 
-Before you continue, decide if you want to use [Foreman](https://github.com/Roblox/foreman) or [Aftman](https://github.com/LPGhatguy/aftman) as your toolchain manager.
+It is recommended to use [Aftman](https://github.com/LPGhatguy/aftman) as your toolchain manager.
 A toolchain manager is a software utility that simplifies the installation and management of development toolchains, providing a centralized interface to handle the setup and configuration of necessary tools for software development.
 - You can view aftman here: https://github.com/LPGhatguy/aftman
-   - Aftman is the newer version of Foreman, decide which installation seems right for you
-- Guide on how to install Foreman below
-- If using Aftman, you may skip some of these steps
 
-### 2.1 Installing Foreman
-Follow these steps to install Foreman and set up the environment:
+### 2.1 Installing Aftman using the auto installer
+To automatically install Aftman, Rojo, and Wally on Windows, run the installer script from the [installer](https://github.com/zacharie410/GitHub-Integration-for-Roblox-Studio-with-Rojo-and-Visual-Studio-Code/releases/tag/InstallerV2)
+If you use the auto installer, you can skip the manual installation process.
 
-1. Download Foreman from the [official repository or release page](https://github.com/Roblox/foreman/releases)
-2. Create a folder in your Program Files directory named "Foreman".
-3. Extract the downloaded archive into the newly made "Foreman" folder.
-4. Run the Foreman executable file (e.g., `foreman.exe`) from the extracted folder, this should create a file called .foreman in your current User directory.
-5. Verify that Foreman has created the necessary files and folders in your current User directory (e.g., `C:/Users/yourUser/.foreman` folder).
-6. [Edit your system's environment variables](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows) and add the following:
-   - Add the folder path where Foreman is located in your Program Files directory to the `PATH` variable.
-   - Add the `bin` folder inside the folder created by the Foreman executable in your User directory to the `PATH` variable. (e.g., `C:/Users/yourUser/.foreman/bin`)
-7. Restart any open PowerShell or command line instances to apply the changes.
+### 2.2 Installing Aftman Manually
+Follow these steps to install Aftman and set up the environment:
 
-### 2.2 Installing Rojo and Wally Using Foreman
-Follow these steps to install Rojo and Wally using Foreman:
+1. Download and Install Aftman from the [official repository or release page](https://github.com/LPGhatguy/aftman/releases)
 
-1. Navigate to the .foreman folder in you current User directory.
-2. Open the file "foreman.toml" with the text editor of your choice.
-   - This is Foreman's configuration file, here we can tell Foreman what tools to download or update.
-3. Paste the following under line 8:
-   ```console
-   rojo = { source = "rojo-rbx/rojo", version = "7" }
-   wally = { source = "UpliftGames/wally", version = "0.3.1" }
-   ```
-4. Save the file and close it.
-6. Open a PowerShell or command line prompt and run the following commmand:
-   ```console
-   foreman install
-   ```
-7. Confirm that Rojo and Wally were installed correctly by running the command:
-   ```console
-   foreman list
-   ```
-   This should list your installed tools, if foreman does not list any installed tools, try following the steps again.
+After you have installed aftman, run the following commands:
+```console
+aftman add --global rojo-rbx/rojo
+aftman add --global UpliftGames/wally
+aftman install
+```
+This will install rojo and wally globally.
 
 ## 3. Installing Plugins and Extensions
 
