@@ -69,15 +69,13 @@ Follow these steps to install the Rojo plugin in Roblox Studio:
 ### 3.2 Visual Studio Code Extensions
 To enhance your development experience with Rojo Visual Studio to Roblox Studio integration, it is recommended to install the following Visual Studio Code extensions. These extensions provide additional functionality and tools specific to Roblox development.
 
-1. Required: **Rojo - Roblox Studio Sync** (by evaera): The Rojo extension provides seamless synchronization between Visual Studio Code and Roblox Studio. It enables you to edit your Roblox projects using Visual Studio Code while automatically syncing the changes to Roblox Studio.
+1. Highly Recommended: **Selene** (by Kampfkarren): Selene is a powerful linter for Roblox Lua scripts. This extension integrates Selene into Visual Studio Code, providing real-time linting, code analysis, and error detection as you write code. It helps you maintain code quality and adhere to Roblox Lua coding standards.
 
 2. Highly Recommended: **Roblox LSP** (by Nightrains): Roblox LSP (Language Server Protocol) extension provides advanced language features for Roblox Lua scripting. It includes features like IntelliSense, diagnostics, and code navigation, enhancing your coding productivity and accuracy.
 
 3. Highly Recommended: **Roblox API Explorer** (by evaera): This extension allows you to explore the Roblox API documentation directly within Visual Studio Code. It provides autocomplete suggestions, documentation tooltips, and quick access to Roblox API references.
 
 4. Highly Recommended: **Rojo Viewer** (by Filip Tibell): Rojo Viewer extension provides a visual representation of your Rojo project's structure within Visual Studio Code. It helps you visualize the relationships between files, folders, and namespaces in your project, making it easier to navigate and understand the project's organization.
-
-5. Highly Recommended: **Selene** (by Kampfkarren): Selene is a powerful linter for Roblox Lua scripts. This extension integrates Selene into Visual Studio Code, providing real-time linting, code analysis, and error detection as you write code. It helps you maintain code quality and adhere to Roblox Lua coding standards.
 
 Installing these recommended extensions can greatly enhance your development workflow and productivity when working with Rojo Visual Studio to Roblox Studio integration.
 
