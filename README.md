@@ -70,7 +70,7 @@ Follow these steps to install the Rojo plugin in Roblox Studio:
 To enhance your development experience with Rojo Visual Studio to Roblox Studio integration, it is recommended to install the following Visual Studio Code extensions. These extensions provide additional functionality and tools specific to Roblox development.
 
 1. Highly Recommended: **Selene** (by Kampfkarren): Selene is a powerful linter for Roblox Lua scripts. This extension integrates Selene into Visual Studio Code, providing real-time linting, code analysis, and error detection as you write code. It helps you maintain code quality and adhere to Roblox Lua coding standards.
-
+   
 2. Highly Recommended: **Roblox LSP** (by Nightrains): Roblox LSP (Language Server Protocol) extension provides advanced language features for Roblox Lua scripting. It includes features like IntelliSense, diagnostics, and code navigation, enhancing your coding productivity and accuracy.
 
 3. Highly Recommended: **Roblox API Explorer** (by evaera): This extension allows you to explore the Roblox API documentation directly within Visual Studio Code. It provides autocomplete suggestions, documentation tooltips, and quick access to Roblox API references.
@@ -200,6 +200,9 @@ A: It is recommended to exclusively edit scripts from Visual Studio Code to avoi
 
 Q: How can I update the project dependencies with Wally?
 A: Simply update the version numbers of the dependencies in the `wally.toml` file and run `wally install` to update the dependencies.
+
+Q: What is **Rojo - Roblox Studio Sync** (by evaera)
+A: The [Rojo extension](https://github.com/rojo-rbx/vscode-rojo) provides seamless synchronization between Visual Studio Code and Roblox Studio. It replaces the need for many installation steps, however may not be an end all solution for all project requirements. That being said, it may be a good option for you: https://marketplace.visualstudio.com/items?itemName=evaera.vscode-rojo
 
 ## 10. Support and Community
 If you need further support or want to engage with the community, you can visit the following resources:
